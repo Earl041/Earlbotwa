@@ -61,7 +61,7 @@ conn.on('credentials-updated', () =>
 })
 fs.existsSync('./session.json') && conn.loadAuthInfo('./session.json')
 // uncomment the following line to proxy the connection; some random proxy I got off of: https://proxyscrape.com/free-proxy-list
-//conn.connectOptions.agent = ProxyAgent ('http://google.com:8080')
+//conn.connectOptions.agent = ProxyAgent ('http://1.0.180.120:8080')
 conn.connect();
 
 conn.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log('Bot by ig:@earl_poke')
